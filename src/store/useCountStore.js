@@ -1,12 +1,13 @@
-import { create } from "zustand"
+// import { create } from "zustand"
+import { create } from "../utlis"
 
 export const useCountStore = create((set, get) => ({
   count: 0,
   increment: () => {
     // 写法一:
-    set(state => ({ count: state.count + 1 }))
+    // set(state => ({ count: state.count + 1 }))
     // 写法二:
-    // set({ count: get().count + 1 })
+    set({ count: get().count + 1 })
   },
   decrement: () => {
     set(state => ({ count: state.count - 1 }))
